@@ -1,4 +1,4 @@
-Transfer-Function-GUI to GLFW3
+Transfer Function GUI to GLFW3
 =====================
 
 Graphical user interface for transfer function used in volume rendering, originally created by Luiyit Hernandez and adapted to glfw3 by Andrés Alvarez.   
