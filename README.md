@@ -1,6 +1,6 @@
 # Transfer function GUI for GLFW3
 
-> Graphical user interface for transfer function used in volume rendering, originally created by Luiyit Hernandez.   
+Graphical user interface for transfer function used in volume rendering, originally created by Luiyit Hernandez.   
 The main steps to include the class in your code are:
 
 ### Usage
@@ -44,7 +44,7 @@ g_pTransferFunc->updateTexture = false;
 
 ### Feedback
 
-Pull requests, feature ideas and bug reports are welcome
+Pull requests, feature ideas and bug reports are welcome.
 
 ### License
 
