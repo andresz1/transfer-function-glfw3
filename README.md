@@ -1,7 +1,7 @@
-Transfer Function GUI to GLFW3
+Transfer function GUI for GLFW3
 =====================
 
-Graphical user interface for transfer function used in volume rendering, originally created by Luiyit Hernandez and adapted to glfw3 by Andrés Alvarez.   
+Graphical user interface for transfer function used in volume rendering, originally created by Luiyit Hernandez.   
 The main steps to include the class in your code are:
 
 ##### In "TransferFunction.h": 
@@ -13,29 +13,35 @@ Include glfw3 and glm header files.
 Edit the way to load the textures in the "initContext" method, in this case was used DevIL.
 
 ##### In the program initialization: 
-```
+```cpp
 TransferFunction *g_pTransferFunc = new TransferFunction();   
 g_pTransferFunc->InitContext(GLFWwindow *window, int *windowsW, int *windowsH, int posx, int posy);
 ```
 ##### In the glfw3 callback function "MouseButton":
-```
+```cpp
 double x, y;   
 glfwGetCursorPos(g_pWindow, &x, &y);   
-g_pTransferFunc->MouseButton(x, y, button, action); 
 // This method returns a bool depending on whether an event is captured or not
+g_pTransferFunc->MouseButton(x, y, button, action); 
 ```
 ##### In the glfw3 callback function "CursorPos":
-```
-g_pTransferFunc->CursorPos(x, y); 
+```cpp
 // This method returns a bool depending on whether an event is captured or not
+g_pTransferFunc->CursorPos(x, y); 
 ```
 ##### In the display function:
-`g_pTransferFunc->Display();`
+```cp
+g_pTransferFunc->Display();
+```
 
 ##### In the "Main loop":
-```
-if(g_pTransferFunc->updateTexture) // Check if the color palette changed    
-	UpdateTexture();               // Update the color palette, this is obtained by: g_pTransferFunc->colorPalette. Then do: g_pTransferFunc->updateTexture = false;
+```cpp
+// Check if the color palette changed
+if(g_pTransferFunc->updateTexture)    
+	UpdateTexture();               
+// Update the color palette
+// This is obtained by: g_pTransferFunc->colorPalette
+g_pTransferFunc->updateTexture = false;
 ```
      
 [Click here](https://www.youtube.com/watch?v=2ONEKOq4d0U) to see the general characteristics of this GUI in a video.
