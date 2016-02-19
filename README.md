@@ -48,4 +48,4 @@ Pull requests, feature ideas and bug reports are welcome.
 
 ### License
 
-MIT
+MIT.
