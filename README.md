@@ -34,7 +34,7 @@ In the main loop:
 ```cpp
 // Check if the color palette changed
 if(g_pTransferFunc->updateTexture)    
-	UpdateTexture();               
+	UpdateTexture();
 // Update the color palette
 // This is obtained by: g_pTransferFunc->colorPalette
 g_pTransferFunc->updateTexture = false;
